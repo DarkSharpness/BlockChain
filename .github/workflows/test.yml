@@ -1,0 +1,16 @@
+name: Correctness Test
+
+on: [push]
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+
+      - name: Run some custom shell scripts
+        run: |
+            pip install -r requirements.txt
+            ./script/run.sh

@@ -109,3 +109,6 @@ decrypted_message = elgamal.elgamal_decrypt(C1, C2)
 
 # 验证消息
 print("Decrypted Message:", decrypted_message.decode())
+
+assert rsa.verify(message, signature)
+assert message == decrypted_message.decode()
